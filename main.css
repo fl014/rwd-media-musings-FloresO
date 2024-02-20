@@ -1,0 +1,406 @@
+/*---------------------------------------
+	SITE: UCBA eMedia Musings
+---------------------------------------*/
+
+
+/* GLOBAL SETTINGS
+---------------------------------------*/
+a {
+	color: black; 
+	text-decoration: none; 
+}
+
+a:hover {
+	text-decoration: underline; 
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Protest Revolution', sans-serif;
+	background: linear-gradient(#D0C2B0, white);
+	height: 100vh; 
+    margin: 0; 
+    padding: 0;
+}
+	
+div.wrapper {
+	width: 960px; 
+    margin: 0 auto; 
+    border: 1px solid #ccc; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    background-color: #fff;
+    padding: 20px; 
+}
+
+img {
+	border-radius: 10px;
+	max-width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+
+/* HEADER
+---------------------------------------*/
+	
+header {
+	background: linear-gradient(to right, blue, white);
+	background-color: pink; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 40px; 
+}
+
+
+header div.sitename { /* ← contains both the h1 and h2 */
+	padding: 10px;
+}
+
+header h1 {
+	font-family: 'Protest Revolution', sans-serif;
+    font-size: 2.5em; 
+}
+
+header h1 a {
+	color: black;
+	text-decoration: none;
+}
+
+header h2 {
+	font-size: 1.5em;
+}
+
+
+
+/* MAIN NAVIGATION 
+---------------------------------------*/	
+
+nav.topnav { /* ← entire navigation area */
+	padding: 10px;
+	background-color: #f0f0f0; 
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+}
+
+nav.topnav ul {
+	list-style-type: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+nav.topnav li {
+	display: inline;
+	margin-right: 10px;
+}
+
+nav.topnav a {
+	padding: 1em 2em;
+	text-transform: uppercase;
+	display: block;
+	text-decoration: none;
+	color: black; 
+	transition: color 0.3s ease;
+}
+
+nav.topnav a:hover {
+	background-color: ghostwhite; 
+	border-radius: 2em;
+	color: black;
+}
+
+
+
+/* HOMEPAGE LAYOUT
+---------------------------------------*/	
+main.homepage {
+	display: grid; 
+	grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; 
+}
+
+article.blog {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	grid-column: 1 / span 3; 
+	grid-row: 1 / span 2; 
+	padding-left: 10px;
+}
+
+article.blog h2 { /* ← blog heading */
+	font-size: 24px; 
+    border-bottom: 1px solid; 
+    padding-bottom: 10px;
+}
+
+article.blog p { /* ← blog text */
+	font-size: 18px; 
+    line-height: 1.6; 
+	 margin-bottom: 10px;
+}
+
+main.homepage aside { /* ← both asides */
+	background-color: #f9f9f9; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px; 
+}
+
+main.homepage aside.recent {
+	grid-column: 4 / span 1; 
+	grid-row: 1 / span 1; 
+}
+
+main.homepage aside.links {
+	grid-column: 4 / span 1; 
+    grid-row: 2 / span 1; 
+}
+
+main.homepage aside h3 { /* ← h3s in asides */
+
+}
+
+main.homepage aside ul { /* ← lists in the asides */
+
+}
+
+main.homepage aside li { /* ← items in the aside lists */
+	margin-left: 20px; 
+	margin-bottom: 10px;
+}
+
+main.homepage aside li a { /* ← links in the asides */
+
+}
+
+main.homepage aside li a:hover { 
+	color: red; 
+    text-decoration: underline;
+}
+
+
+
+/* CAMPUS AREA
+---------------------------------------*/
+
+section.campus	{
+	grid-column: 1 / span 4; 
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr); 
+    grid-gap: 20px; 
+    background-color: #f9f9f9; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}	
+
+section.campus section { /* ← all 6 of the building sections */
+
+}
+
+section.campus h3 {
+	font-family: 'Protest Revolution', sans-serif;
+	font-size: 20px;
+}
+
+section.campus figure {
+
+}
+
+section.campus img {
+	border: 5px solid ghostwhite; /* ← you can change this */
+	box-shadow: 2px 2px 5px #959595; /* ← you can change this */
+}
+
+section.campus figcaption {
+	font-size: 14px;
+}
+
+
+
+/* FOOTER
+---------------------------------------*/
+
+footer {
+	grid-column: 1 / 11; 
+	justify-self: stretch; 
+	align-self: end;
+	background-color: ghostwhite;
+}
+
+footer p { 
+
+}
+
+
+/* Don't add any media queries yet.
+   You will add them for the next part of this assignment */ 
+
+/* TABLET
+---------------------------------------*/
+
+@media (max-width: 768px) {
+
+	body {
+		 font-size: 14px; 
+	}
+	div.wrapper {
+		width: 95%;
+		max-width: none;
+		margin: 0 auto;
+  }
+
+  img {
+		max-width: 100%;
+  }
+  header {
+	flex-direction: column; 
+	align-items: center; 
+	padding: 20px 0; 
+}
+
+nav.topnav {
+	flex-direction: column;
+	margin-top: 10px; 
+	background-color: #f0f0f0;
+	padding: 10px; 
+}
+
+main.homepage {
+	grid-template-columns: 1fr 1fr;
+}
+
+article.blog {
+	grid-column: 1 / -1; 
+	grid-row: 1 / 2; 
+}
+
+main.homepage aside.recent {
+	grid-column: 1 / 2; 
+	grid-row: 2 / 3; 
+}
+
+main.homepage aside.links {
+	grid-column: 2 / 3; 
+	grid-row: 2 / 3; 
+}
+
+section.campus {
+	grid-column: 1 / -1; 
+	grid-row: 3 / 4; 
+	grid-template-columns: repeat(3, 1fr);
+}
+
+section.campus figure {
+	display: grid; 
+	grid-template-columns: 1fr 2fr; 
+	grid-gap: 10px; 
+	align-items: center; 
+}
+
+section.campus figure img {
+	width: 100%;
+}
+
+article.blog h2 {
+	font-size: 28px; 
+}
+
+article.blog p {
+	font-size: 18px; 
+	line-height: 1.6; 
+}
+
+main.homepage aside h3 {
+	font-size: 20px; 
+}
+
+main.homepage aside li {
+	margin-bottom: 10px; 
+}
+
+main.homepage aside a {
+	font-size: 16px; 
+	padding: 5px 10px; 
+}
+
+section.campus h3 {
+	font-size: 18px; 
+}
+
+section.campus figcaption {
+	font-size: 14px; 
+	text-align: center; 
+}
+
+}
+
+/* PHONE
+---------------------------------------*/
+
+@media (max-width: 480px) {
+	
+	div.wrapper {
+		 width: 100%; 
+		 margin: 0; 
+	}
+
+	header {
+		 padding: 10px; 
+		 margin: 0; 
+	}
+
+	nav.topnav {
+		 width: 98%; 
+		 margin-bottom: 0.5em; 
+	}
+
+	nav.topnav ul {
+		 flex-direction: column; 
+	}
+
+	nav.topnav li {
+		 border-bottom: 1px solid black; 
+	}
+
+	nav.topnav li:last-of-type {
+		 border-bottom: none; 
+	}
+
+	main.homepage {
+		 grid-template-columns: 1fr; 
+	}
+
+	article.blog {
+		 grid-column: auto; 
+		 font-size: 16px; 
+		 line-height: 1.4; 
+	}
+
+	main.homepage aside {
+		 display: none; 
+	}
+
+	section.campus {
+		 grid-template-columns: 1fr; 
+		 grid-gap: 10px; 
+		 background-color: gray; 
+		 padding-right: 10px; 
+		 border-radius: 10px; 
+	}
+
+	section.campus h3 {
+		 font-size: 20px; 
+	}
+
+	section.campus figure {
+		 grid-template-columns: 1fr 2fr; 
+	}
+
+	section.campus figcaption {
+		 font-size: 14px; 
+		 line-height: 1.4; 
+	}
+}
